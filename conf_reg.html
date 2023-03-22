@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>       
+    <!-- Задаем заголовок документа -->
+    <title>
+        Регистрация на конференцию
+    </title>
+    <!-- Определяем кодировку символов документа -->
+    <meta charset="UTF-8">
+    <!-- Информаци для поисковых машин -->
+    <meta name="description" content="Описание содержимого страницы">
+    <meta name="keywords" content="Ключевые слова через запятую">  
+    <!-- область просмотра в адаптивном дизайне -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+<!-- Подключаем внешнюю таблицу стилей -->	
+ <link rel="stylesheet" type="text/css" href="style.css"> 
+
+
+ 
+ <!-- Подключаем сценарии -->
+ <script src="script.js"></script>
+ </head>
+ <body>
+ <!-- шапка документа -->
+ <header>
+    <h3>ПТИ</h3>
+    <div class="container">
+    <nav>
+        <ul>
+            <li><a href = "index.html">На главную</a></li>
+            <li><a href = "login.html">Авторизация</a></li>
+            <li><a href = "conf_reg.html">Регистрация на конференцию</a></li>
+            <li><a href = "photo_gallery.html">Фотогалерея</a></li>
+            <li><a href = "messages.html">Сообщения</a></li>
+            <li><a href = "layout.html">Вёрстка по макету</a></li>
+        </ul>
+    </nav>
+    </div>
+</header>
+<!-- основное содержимое    -->
+<main>
+    <div class="container">
+        <div class="form">
+    <h1 class="hform">Регистрация на конференцию</h1>
+    
+    <form action="" method="POST">
+        <div>
+        <label for = "user_name"> Фамилия, имя, отчество</label>
+        <input type="text" name="user_name" id="user_name" required 
+        placeholder="Фамилия Имя Отчество"
+        pattern="[А-Я][а-я]+[ ][А-Я][а-я]+[ ][А-Я][а-я]+[ ]*"
+        size="20">
+        </div>
+        <div>
+        <label for = "tel">Контактный телефон </label>
+        <input type="tel" name="tel" id="tel" required
+        placeholder="+7"
+        pattern="[+7][0-9]+" maxlength="12" size="13">
+    </div>
+    <div>
+        <label for = "email">Адрес электронной почты </label>
+        <input type="email" name="email" id="email" required>
+    </div>
+    <div>
+        <label for="date">Дата рождения: </label>
+        <input type="date" id="date" name="date">
+    </div>
+    <div>
+    <label for="section">Выберите секцию конференции:</label>
+    <select name="section" id="section" required="required">
+        <option value="">Выбрать</option>
+        <option value="0">Математика</option>
+        <option value="1">Физика</option>
+        <option value="2">Информатика</option>
+    </select>
+    </div>
+<div>
+    <input type="checkbox" name="Speaker" id="Speaker">
+    <label for="Speaker">Участие с докладом:</label>
+    
+</div>
+<div>
+    <label for = "report">Тема Вашего доклада:</label><br>
+    <textarea name="report" id="report" cols="20" rows="3"></textarea>
+</div>
+<div>
+    Выберите форму участия: <br>
+    <input type="radio" value="очное" name="participation" id="offline"><label for="offline">очная форма</label> <br>
+    <input type="radio"  value="дистанционная форма" name="participation" id="online"><label for="online">дистанционная форма</label> <br>
+    <input type="radio"  value="смешанная форма" name="participation" id="offline_online"><label for="offline_online">смешанная форма</label> <br>
+</div>
+
+<div>
+        
+    <button class="button-1">Зарегистрироваться</button>
+    </div>
+    </form>
+    </div>
+    </div>
+</main>
+<!--
+<aside>
+    Это боковая панель ;)
+</aside> -->
+<!-- подвал -->
+<footer>
+    
+    <h3>2023 учебный год</h3>
+    
+</footer>
+ </body>
+ </html>
